@@ -10,6 +10,9 @@ class MembersPage extends StatelessWidget {
         title: const Text("Mempers"),
         backgroundColor: const Color(0xff4A322B),
       ),
+      body: Row(
+        children: [Image.asset("")],
+      ),
     );
   }
 }
