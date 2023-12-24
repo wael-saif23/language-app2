@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:language_app/componants/item_image.dart';
 import 'package:language_app/models/item_model.dart';
 
 class ItemComponants extends StatelessWidget {
@@ -20,11 +21,8 @@ class ItemComponants extends StatelessWidget {
         color: color,
         child: Row(
           children: [
-            Container(
-              color: Colors.white,
-              child: Image(
-                image: AssetImage(item.imagePath!),
-              ),
+            ItemImage(
+              item: item,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8),
