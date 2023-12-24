@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:language_app/componants/item_image.dart';
+import 'package:language_app/componants/text_sound_item.dart';
 import 'package:language_app/models/item_model.dart';
 
 class ItemComponants extends StatelessWidget {
@@ -16,29 +17,25 @@ class ItemComponants extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            width: 2,
+            color: const Color(0xff4A322B),
+          ),
+        ),
         height: MediaQuery.of(context).size.height * .1,
         width: double.infinity,
-        color: color,
         child: Row(
           children: [
             ItemImage(
               item: item,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [Text(item.engWard), Text(item.japWard)],
-              ),
+            const VerticalDivider(
+                color: Color(0xff4A322B), thickness: 1, width: 1),
+            TextAndSoundItem(
+              item: item,
+              color: color,
             ),
-            const Spacer(),
-            IconButton(
-                onPressed: () {
-                  item.playoudio();
-                },
-                color: Colors.white,
-                icon: const Icon(Icons.play_arrow))
           ],
         ),
       ),

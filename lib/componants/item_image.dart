@@ -9,9 +9,11 @@ class ItemImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Image(
-        image: AssetImage(item.imagePath!),
-      ),
+      child: item.imagePath != null
+          ? Image(
+              image: AssetImage(item.imagePath!),
+            )
+          : const SizedBox(),
     );
   }
 }
