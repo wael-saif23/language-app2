@@ -25,7 +25,7 @@ class Gatagory extends StatelessWidget {
         color: color,
         child: Text(
           nameOfGatagory,
-          style: const TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24, color: Colors.white),
         ),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:language_app/componants/gatagory.dart';
-import 'package:language_app/screens/members.dart';
+import 'package:language_app/screens/numbers.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       ),
       body: const Gatagory(
         nameOfGatagory: 'Members',
-        pageRuteName: MembersPage(),
+        pageRuteName: NumbersPage(),
         color: Color(0xffFA9532),
       ),
     );
