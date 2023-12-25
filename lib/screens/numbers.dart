@@ -4,7 +4,7 @@ import 'package:language_app/models/item_model.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
-  final List<ItemsModle> numbers = const [
+  final List<ItemsModle> items = const [
     ItemsModle(
       imagePath: "assets/images/numbers/number_one.png",
       engWard: "One",
@@ -77,10 +77,10 @@ class NumbersPage extends StatelessWidget {
           backgroundColor: const Color(0xff4A322B),
         ),
         body: ListView.builder(
-            itemCount: numbers.length,
+            itemCount: items.length,
             itemBuilder: (BuildContext context, index) {
               return ItemComponants(
-                item: numbers[index],
+                item: items[index],
                 color: const Color(0xffFA9532),
               );
             }));
